@@ -1,21 +1,22 @@
-import Navbar from '@/components/Navbar'
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
-    <>
-      {/* 1. Renderiza Navbar no topo */}
-      <Navbar/>
+    // 2. Alteração: Wrapper principal com fundo escuro para manter a identidade visual
+    <main className="min-h-screen bg-slate-950 relative overflow-x-hidden">
+      
+  
+      <Navbar />
+      
+      <Hero />
+      
+      {/* Futuras seções do seu portfólio entrarão aqui embaixo, como: */}
+      {/* <About /> */}
+      {/* <Projects /> */}
+      {/* <Contact /> */}
 
-      <main className="pt-20 max-w-7xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-slate-800">
-          Olá, eu sou Luan Estrela!
-        </h1>
-        <p className="mt-4 text-lg text-slate-600">
-          Bem-vindo ao meu portfólio. Desenvolvedor Full Stack em construção!
-        </p>
-        
-        {/* Resto das suas seções aqui (Hero, Sobre, etc) */}
-      </main>
-    </>
+    </main>
   );
 }
