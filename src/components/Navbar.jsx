@@ -1,15 +1,17 @@
 "use client";
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
+    
+    // Estado para monitorar qual o ID da seção ativa no momento
+    const [activeSection, setActiveSection] = useState('#inicial');
 
+    // Monitoramento do efeito de rolagem
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 20) {
@@ -25,8 +27,33 @@ const Navbar = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const sections = document.querySelectorAll('section[id]');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '-35% 0px -55% 0px',
+            threshold: 0
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(`#${entry.target.id}`);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, []);
+
     const navItems = [
-        { name: 'Inicial', href: '/' },
+        { name: 'Inicio', href: '#inicio' },
         { name: 'Sobre', href: '#sobre' },
         { name: 'Projetos', href: '#projetos' },
         { name: 'Habilidades', href: '#habilidades' }, 
@@ -46,7 +73,7 @@ const Navbar = () => {
                     
                     {/* Logo */}
                     <div className='flex-shrink-0'>
-                        <Link href='/' className='text-xl font-bold tracking-wider hover:text-blue-400 transition-colors'>
+                        <Link href='#inicial' className='text-xl font-bold tracking-wider hover:text-blue-400 transition-colors'>
                             Luan Estrela
                         </Link>
                     </div>
@@ -55,13 +82,14 @@ const Navbar = () => {
                     <div className='hidden md:flex items-center space-x-8'>
                         <div className='flex space-x-4'>
                             {navItems.map((item) => {
-                                const isActive = pathname === item.href;
+
+                                const isActive = activeSection === item.href;
 
                                 return (
                                     <Link
                                         key={item.href}
                                         href={item.href}
-                                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                        className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                                             isActive 
                                                 ? 'text-blue-400 font-semibold border-b-2 border-blue-400 rounded-none' 
                                                 : 'text-gray-300 hover:text-blue-400'
@@ -73,7 +101,7 @@ const Navbar = () => {
                             })}
                         </div>
                     
-                        {/* Ícones sociais desktop */}
+                        {/* Ícones sociais desktop (Mantido original) */}
                         <div className='flex items-center space-x-4 border-l border-slate-700 pl-4'>
                             <a href="https://github.com/Luan-E" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors" aria-label="GitHub">
                                 <FaGithub className="text-xl" />
@@ -87,7 +115,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Botão do Menu Mobile */}
+                    {/* Botão do Menu Mobile (Mantido original) */}
                     <div className='md:hidden flex items-center'>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -107,6 +135,7 @@ const Navbar = () => {
                 </div>
             </div>
 
+            {/* Menu Mobile Sanfona */}
             <div className={`md:hidden grid transition-all duration-300 ease-in-out ${
                 isOpen 
                     ? 'grid-rows-[1fr] opacity-100' 
@@ -116,7 +145,8 @@ const Navbar = () => {
                 <div className='overflow-hidden bg-slate-950/95 backdrop-blur-lg border-t border-slate-800 shadow-lg'>
                     <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
                         {navItems.map((item) => {
-                            const isActive = pathname === item.href;
+
+                        const isActive = activeSection === item.href;
 
                             return (
                                 <Link
@@ -135,7 +165,7 @@ const Navbar = () => {
                         })}
                     </div>
                     
-                    {/* Ícones sociais mobile */}
+                    {/* Ícones sociais mobile (Mantido original) */}
                     <div className='pt-4 pb-4 border-t border-slate-800 flex justify-center space-x-6'>
                         <a href="https://github.com/Luan-E" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors" aria-label="GitHub">
                             <FaGithub className="text-2xl" />
