@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Sobre from '@/components/Sobre'
+import Projetos from '@/components/Projetos'
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <Hero />
       
       <Sobre />
+
+      <Projetos />
       {/* Futuras seções do seu portfólio entrarão aqui embaixo, como: */}
       {/* <About /> */}
       {/* <Projects /> */}
