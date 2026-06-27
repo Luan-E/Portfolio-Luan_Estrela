@@ -6,7 +6,7 @@ import { FaArrowRight, FaDownload } from 'react-icons/fa';
 const Hero = () => {
     return (
         // Container principal
-        <section className='w-full min-h-screen bg-slate-950 text-white flex items-center pt-16 overflow-hidden relative'>
+        <section id='inicio' className='w-full min-h-screen bg-slate-950 text-white flex items-center pt-16 overflow-hidden relative'>
             
             {/* Efeito de luz de fundo (Glow/Blur) */}
             <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none'></div>
