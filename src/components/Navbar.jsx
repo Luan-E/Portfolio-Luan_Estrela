@@ -27,10 +27,10 @@ const Navbar = () => {
 
     const navItems = [
         { name: 'Inicial', href: '/' },
-        { name: 'Sobre', href: '/sobre' },
-        { name: 'Projetos', href: '/projetos' },
-        { name: 'Habilidades', href: '/habilidades' }, 
-        { name: 'Contato', href: '/contato' }
+        { name: 'Sobre', href: '#sobre' },
+        { name: 'Projetos', href: '#projetos' },
+        { name: 'Habilidades', href: '#habilidades' }, 
+        { name: 'Contato', href: '#contato' }
     ];
 
     return (
