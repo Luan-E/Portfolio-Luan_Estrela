@@ -101,7 +101,7 @@ const Navbar = () => {
                             })}
                         </div>
                     
-                        {/* Ícones sociais desktop (Mantido original) */}
+                        {/* Ícones sociais desktop */}
                         <div className='flex items-center space-x-4 border-l border-slate-700 pl-4'>
                             <a href="https://github.com/Luan-E" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors" aria-label="GitHub">
                                 <FaGithub className="text-xl" />
@@ -115,7 +115,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Botão do Menu Mobile (Mantido original) */}
+                    {/* Botão do Menu Mobile */}
                     <div className='md:hidden flex items-center'>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -165,7 +165,7 @@ const Navbar = () => {
                         })}
                     </div>
                     
-                    {/* Ícones sociais mobile (Mantido original) */}
+                    {/* Ícones sociais mobile */}
                     <div className='pt-4 pb-4 border-t border-slate-800 flex justify-center space-x-6'>
                         <a href="https://github.com/Luan-E" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors" aria-label="GitHub">
                             <FaGithub className="text-2xl" />
