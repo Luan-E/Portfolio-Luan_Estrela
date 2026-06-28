@@ -2,10 +2,11 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Sobre from '@/components/Sobre'
+import Projetos from '@/components/Projetos'
+import Habilidades from '@/components/Habilidades'
 
 export default function Home() {
   return (
-    // 2. Alteração: Wrapper principal com fundo escuro para manter a identidade visual
     <main className="min-h-screen bg-slate-950 relative overflow-x-hidden">
       
   
@@ -14,11 +15,10 @@ export default function Home() {
       <Hero />
       
       <Sobre />
-      {/* Futuras seções do seu portfólio entrarão aqui embaixo, como: */}
-      {/* <About /> */}
-      {/* <Projects /> */}
-      {/* <Contact /> */}
 
+      <Projetos />
+ 
+      <Habilidades />
     </main>
   );
 }
