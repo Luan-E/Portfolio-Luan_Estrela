@@ -3,15 +3,15 @@ import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt, FaCode } from 'react-icons/fa';
 
 const Projetos = () => {
-    // 1. Array de objetos contendo os dados dos seus projetos para fácil manutenção
+    // Array de objetos contendo os dados dos seus projetos para fácil manutenção
     const projectsList = [
         {
             id: 1,
             title: "Meu Portfólio Tech",
             description: "Portfólio moderno desenvolvido para apresentar meus projetos e habilidades. Conta com design responsivo, efeitos de vidro fosco (glassmorphism) e otimização de performance.",
             tags: ["Next.js", "React", "Tailwind CSS", "Git"],
-            image: "/images/projeto-portfolio.png", // Você criará/colocará essa imagem depois
-            github: "https://github.com/seu-usuario/seu-repositorio",
+            image: "/images/projeto-portfolio.png",
+            github: "https://github.com/Luan-E/Portfolio-Luan_Estrela",
             deploy: "#"
         },
         {
@@ -56,14 +56,23 @@ const Projetos = () => {
                         >
                             
                             {/* Container da Imagem do Projeto */}
-                            <div className='relative h-48 w-full overflow-hidden bg-slate-950 flex items-center justify-center'>
-                               
+                            <div className='relative h-48 w-full overflow-hidden bg-slate-950 flex items-center justify-center border-b border-slate-800/50'>
                                 <div className='absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/80 z-10'></div>
                                 
-                                <Image 
-                                    // PREENCHER
-                                />
-                                <FaCode className='text-slate-800 text-6xl absolute z-0' />
+                                {project.image ? (
+                                    <Image 
+                                        src={project.image} 
+                                        alt={project.title}
+                                        fill
+                                        className='object-cover transition-transform duration-500 group-hover:scale-105'
+                                        sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
+                                    />
+                                ) : (
+
+                                    <div className='absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 flex items-center justify-center'>
+                                        <FaCode className='text-slate-700/60 text-5xl transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500/40' />
+                                    </div>
+                                )}
                             </div>
 
                             {/* Conteúdo do Card (Textos e Tags) */}
@@ -76,7 +85,7 @@ const Projetos = () => {
                                     {project.description}
                                 </p>
 
-                                {/* 4. Renderização das Tecnologias (Tags) */}
+                                {/* Renderização das Tags */}
                                 <div className='flex flex-wrap gap-2 pt-2'>
                                     {project.tags.map((tag, index) => (
                                         <span 
