@@ -61,7 +61,7 @@ const Contato = () => {
                             <h4 className='text-xs font-semibold text-gray-500 uppercase tracking-wider'>Localização</h4>
 
                             <p className='text-sm sm:text-base text-gray-300'>
-                                Petrolina - PE, Brazil
+                                Petrolina - PE, Brasil
                             </p>
 
                         </div>
