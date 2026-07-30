@@ -19,7 +19,7 @@ const Contato = () => {
 
                     <div className='w-16 h-1 bg-blue-500 mx-auto rounded-full'></div>
 
-                    <p className='text-gray-500 text-sm sm:text-base mt-4 max-w-md mx-auto'>
+                    <p className='text-gray-500 text-xl sm:text-xl mt-4 max-w-md mx-auto'>
 
                         Tem alguma proposta, dúvida ou gostaria de trocar ideias sobre computação? Sinta-se à vontade para enviar uma mensagem!
                     </p>

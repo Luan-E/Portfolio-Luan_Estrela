@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-    FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaLinux
-} from 'react-icons/fa';
-import {
-    SiNextdotjs, SiTailwindcss, SiPython
-} from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaLinux } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiPython } from 'react-icons/si';
 
 const Habilidades = () => {
     // Organização em categorias
