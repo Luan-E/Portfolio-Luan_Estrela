@@ -46,10 +46,10 @@ const Sobre = () => {
                         <h3 className="text-2xl font-bold text-blue-400">
                             Quem é Luan?
                         </h3>
-                        <p className='text-gray-400 leading-relaxed text-base sm:text-lg'>
+                        <p className='text-gray-400 leading-relaxed text-lg sm:text-lg'>
                             Sou um estudante do curso Superior de Licenciatura em Computação, no Instituto Federal de Tecnologia, Ciência e Inovação do Sertão Pernambucano (IFSertãoPE).
                         </p>
-                        <p className='text-gray-400 leading-relaxed text-base sm:text-lg'>
+                        <p className='text-gray-400 leading-relaxed text-lg sm:text-lg'>
                             Atualmente busco conhecimentos sobre a linguagem de programação C e o conjunto de práticas de Development and Operations (DevOps). Como hobbies, pratico Muay Thai e calistenia, toco violão e leio obras como as de Franz Kafka. 
                         </p>
                         

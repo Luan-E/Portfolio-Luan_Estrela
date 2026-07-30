@@ -37,7 +37,7 @@ const Hero = () => {
                         
                         {/* Descrição */}
                         <p className='text-gray-400 text-base sm:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed'>
-                            Estudante de Licenciatura em Computação, segundo período. Sempre visando aprender mais a cada dia! Tenho conhecimento em Python, C, HTML5, CSS3, JavaScript, Next, Git e Github.
+                            Estudante de Licenciatura em Computação, segundo período. Sempre visando aprimorar meus conhecimentos a cada dia! Tenho conhecimento em Python, C, HTML5, CSS3, JavaScript, Next, Git e Github.
                         </p>
                         
                         {/* Botões */}
@@ -45,7 +45,7 @@ const Hero = () => {
 
                             {/* Botão Primário: Ver Projetos */}
                             <Link 
-                                href='/projetos' 
+                                href='#projetos' 
                                 className='w-full sm:w-auto inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg transition-colors group'
                             >
                                 Ver Projetos
@@ -77,10 +77,10 @@ const Hero = () => {
                         <div className='absolute w-56 h-56 sm:w-72 sm:h-72 lg:w-84 lg:h-84 rounded-full bg-slate-900 border border-slate-800 overflow-hidden flex items-center justify-center shadow-2xl'>
                             
                             <Image 
-                                src='/images/fotoPerfil.png'
+                                src='/images/foto-perfil.png'
                                 alt="Foto de Luan Estrela"
                                 fill
-                                priority
+                                preload={true}
                                 className="object-cover"
                                 sizes="(max-width: 768px) 224px, (max-width: 1024px) 288px, 336px"
                             />

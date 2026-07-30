@@ -12,17 +12,8 @@ const Projetos = () => {
             tags: ["Next.js", "React", "Tailwind CSS", "Git"],
             image: "/images/projeto-portfolio.png",
             github: "https://github.com/Luan-E/Portfolio-Luan_Estrela",
-            deploy: "#"
+            deploy: "https://github.com/Luan-E/Portfolio-Luan_Estrela"
         },
-        {
-            id: 2,
-            title: "IA: Determinação de scores",
-            description: "Usando Python, é modelada uma inteligência artificial usando um banco de dados e o framework SciKit-Learn.",
-            tags: ["Python", "SciKit-Learn", "Pandas", "Inteligência Artificial"],
-            //imagem a colocar
-            github: "https://github.com/Luan-E/Inteligencia-artificial",
-            deploy: "#"
-        }
 
     ];
 
@@ -40,7 +31,7 @@ const Projetos = () => {
                         Projetos em Destaque
                     </h2>
                     <div className='w-16 h-1 bg-blue-500 mx-auto rounded-full'></div>
-                    <p className='text-gray-500 text-sm sm:text-base mt-4 max-w-md mx-auto'>
+                    <p className='text-gray-500 text-xl sm:text-xl mt-4 max-w-md mx-auto'>
                         Uma seleção dos principais trabalhos, laboratórios e aplicações que desenvolvi.
                     </p>
                 </div>
