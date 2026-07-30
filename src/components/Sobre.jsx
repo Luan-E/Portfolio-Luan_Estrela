@@ -60,7 +60,7 @@ const Sobre = () => {
                             <div className='bg-slate-950/40 p-4 rounded-xl border border-slate-800/60 backdrop-blur-sm'>
                                 <FaCode className='text-blue-500 text-xl mb-2' />
                                 <h4 className='font-semibold text-white text-xl mb-1'>Desenvolvimento</h4>
-                                <p className='text-base text-gray-500'>Código limpo e focado em boas práticas</p>                       
+                                <p className='text-base text-gray-500'>Código limpo e focado em boas práticas, sempre com ética e dedicação</p>                       
                             </div>
 
                             {/* Card 02 */}
